@@ -1,32 +1,48 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <meta name="viewport" content="width=320; user-scalable=no" />
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <title>Minimal AppLaud App</title>
-
-	  <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
-	  <script src="http://debug.phonegap.com/target/target-script-min.js#d19f7436-f8f8-11e1-bebe-1231392cd79b"></script>
-	  
-	  <script type="text/javascript" charset="utf-8">
-      
-        var onDeviceReady = function() {
-            document.getElementById("devready").innerHTML = "OnDeviceReady fired.";
-        };
-
-        function init() {
-            document.addEventListener("deviceready", onDeviceReady, true);
-        }   
-</script>  
+   	 	<title>Travel in free way....</title>
+   	 	
+   	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+   	 	
+    	<link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.1.0.min.css" />
+    	
+	  	<script src="cordova/cordova-2.0.0.js"></script>
+	  	<script src="jquery.mobile/jquery-1.7.1.min.js"></script>
+		<script src="jquery.mobile/jquery.mobile-1.1.0.min.js"></script>
+		<script src="index.js"></script>
+	  	
+	  	<!-- <script src="http://debug.phonegap.com/target/target-script-min.js#d19f7436-f8f8-11e1-bebe-1231392cd79b"></script> -->
 
   </head>
-  <body onload="init();" id="stage" class="theme">
-    <h2>Minimal AppLaud App</h2>
+  <body id="home" class="theme">
 
-	<p>Your app goes here.</p>
-	<p>
-    <span id="devready">onDeviceReady not fired.</span>
-    </p>
+	<!-- /page -->
+	<div data-role="page" id="home">
+			
+		<!-- /header -->	
+		<header id="header">
+			<h1 align="center">Visibook</h1>
+		</header>
+		
+		<!-- /content -->
+		<div data-role="fieldcontain" align="center">
+			<div>
+				<input type="search" name="search" id="search"/>				
+			</div>
+			
+			<div>
+				<a href="javascript:search();" data-role="button" data-icon="search" data-iconpos="right" data-inline="true">Search</a>
+				<a href="javascript:book();" data-role="button" data-icon="info" data-iconpos="right" data-inline="true">My book</a>
+			</div>
+		</div>
+		
+		<!-- /footer -->	
+		<footer id="footer">	
+			<p align="center"> Copywrite Ivano Agosta </p>
+		</footer>
+	
+	</div>
 
   </body>
 </html>
