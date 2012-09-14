@@ -2,13 +2,14 @@
 
 function search() {
 
-	window.localStorage.setItem("search", $('#search').val());   // save search value
+	window.localStorage.setItem("search", $('#search').val());   	// save search value in local place
 	
-	$.mobile.changePage("searchResults.html", {reloadPage: true});
+	document.location.href="searchResults.html";                    // result page
+
 }
+
 
 function book() {
 	$.mobile.changePage("books.html");
 }
-
 

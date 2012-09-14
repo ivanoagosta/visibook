@@ -10,15 +10,15 @@
 	<script type="text/javascript" src="jquery.mobile/jquery.mobile-1.1.0.min.js"></script>
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true&language=it"></script>
 	<script type="text/javascript" src="searchResults.js"></script>
+	<script type="text/javascript" src="js/links.js"></script>
 	
-	<!-- <script src="http://debug.phonegap.com/target/target-script-min.js#d19f7436-f8f8-11e1-bebe-1231392cd79b"></script>
-	 -->
+	<!-- <script src="http://debug.phonegap.com/target/target-script-min.js#d19f7436-f8f8-11e1-bebe-1231392cd79b"></script>-->
 </head> 
 
-<body onload="createMap();"> 
+<body onload="init()"> 
 
 <!-- /page -->
-<div data-role="page">
+<div data-role="page" align="center">
 
 	<!-- /header -->
 	<header>
@@ -29,22 +29,38 @@
 
 	<!-- /content -->
 	<section id="content">
-		<div id="map" data-role="content" style="width: 80%; height: 300px;">	
-			Your browser doesn't support Google Maps or Javascript is turned off.
+		<div id="map" align="center" style="width: 80%; height: 300px;">	
+			<legend>Your browser doesn't support Google Maps or Javascript is turned off.</legend> 
 		</div>
 		
-		<div id="placeList" style="width: 100%; height: 50inch">
-			<ul>
-				<li>church 1</li>
-				<li>cherch 2</li>
-			</ul>
-		</div>
-	</section>
+		<div align="center">
+			<legend>Choose as many snacks as you'd like:</legend>
+			<li data-role="fieldcontain">
+		        	<fieldset data-role="controlgroup" style="width: 90%;">
+						
+						<input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="custom" />
+						<label for="checkbox-1a">Cheetos</label>
+		
+						<input type="checkbox" name="checkbox-2a" id="checkbox-2a" class="custom" />
+						<label for="checkbox-2a">Doritos</label>
+		
+						<input type="checkbox" name="checkbox-3a" id="checkbox-3a" class="custom" />
+						<label for="checkbox-3a">Fritos</label>
+		
+						<input type="checkbox" name="checkbox-4a" id="checkbox-4a" class="custom" />
+						<label for="checkbox-4a">Sun Chips</label>
+				    </fieldset>
+			 </li>
+		 </div>
+		 
+		 <div id="stage" style="background-color:blue;">
+          
+   		 </div>
 	
 	<!-- /footer -->
 	<footer>
 		<div data-role="footer" align="center">
-			<a href="index.html">Home</a>
+			<a href="javascript:appHome();" id="Home" data-role="button" data-icon="home" data-iconpos="left" data-inline="true">Home</a>	                	
 		</div>
 	</footer>
 	
